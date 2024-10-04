@@ -1,4 +1,5 @@
-Hello, I'm Hyeonjeong. Data Analyst with expertise in data analysis and reporting, query optimization, database design, and data modelling.
+Hello, I'm Hyeonjeong, a Data Analyst
+in data analysis and reporting, query optimization, database design, and data modelling.
 
 • Querying data using SQL.
 • Generate reports and perform ad-hoc data analysis using SQL.
