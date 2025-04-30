@@ -1,0 +1,86 @@
+CREATE TABLE IF NOT EXISTS `products` (
+  `product_id` int unsigned NOT NULL,
+  `category` varchar(40) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `price` int unsigned NOT NULL,
+  PRIMARY KEY (`product_id`)
+) DEFAULT CHARSET=utf8;
+
+INSERT INTO `products` (`product_id`, `category`, `name`, `price`) VALUES
+  (0, '키즈', '어린이칫솔', 1500),
+  (1, '스포츠', '손목보호대', 10000),
+  (2, '주방용품', '밥그릇', 2000),
+  (3, '디지털', '마우스', 15000);
+
+
+CREATE TABLE IF NOT EXISTS `managers` (
+  `id` int unsigned NOT NULL,
+  `name` varchar(40) NOT NULL,
+  `managing` varchar(50) NOT NULL,
+  `off` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
+) DEFAULT CHARSET=utf8;
+
+INSERT INTO `managers` (`id`, `name`, `managing`, `off`) VALUES
+  (0, '영희', '스포츠', '토,일'),
+  (1, '철수', '주방용품', '일,월'),
+  (2, '민수', '디지털', '화,토'),
+  (3, '길순', '키즈', '금,토');
+
+
+CREATE TABLE IF NOT EXISTS `orders` (
+    `order_id` int unsigned NOT NULL,
+    `user_name` varchar(40) NOT NULL,
+    `product_name` varchar(50) NOT NULL,
+    `purchase_date` varchar(40) NULL,
+PRIMARY KEY (`order_id`)
+) DEFAULT CHARSET=utf8;
+
+INSERT INTO `orders` (`order_id`, `user_name`, `product_name`, `purchase_date`) VALUES
+  (0, '영희', '키보드', '20231001'),
+  (1, '민수', '주전자', '20231002'),
+  (2, '길동', '경량의자', '20231003'),
+  (3, '길순', '텐트', '20231004'),
+  (4, '철수', '보리차', NULL);
+
+
+CREATE TABLE IF NOT EXISTS `products_v2` (
+  `product_id` int unsigned NOT NULL,
+  `category` varchar(40) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `price` int unsigned NOT NULL,
+  PRIMARY KEY (`product_id`)
+) DEFAULT CHARSET=utf8;
+
+INSERT INTO `products_v2` (`product_id`, `category`, `name`, `price`) VALUES
+  (0, '키즈', '어린이칫솔', 1500),
+  (1, '스포츠', '손목보호대', 10000),
+  (2, '주방용품', '밥그릇', 2000),
+  (3, '디지털', '마우스', 15000),
+  (4, '청소용품', '청소포', 2000),
+  (5, '문구', '가위', 2000),
+  (6, '욕실용품', '수건', 2000);
+
+
+CREATE TABLE IF NOT EXISTS `products_v3` (
+  `product_id` int unsigned NOT NULL,
+  `category` varchar(40) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `price` int unsigned NOT NULL,
+  `sale_yn` varchar(10) NOT NULL,
+  PRIMARY KEY (`product_id`)
+) DEFAULT CHARSET=utf8;
+
+INSERT INTO `products_v3` (`product_id`, `category`, `name`, `price`, `sale_yn`) VALUES
+  (0, '키즈', '어린이칫솔', 1500, 'yes'),
+  (1, '키즈', '어린이치약', 2000, 'yes'),
+  (2, '키즈', '어린이담요', 5000, 'no'),
+  (3, '키즈', '어린이모자', 5000, 'no'),
+  (4, '주방용품', '숟가락', 1000, 'yes'),
+  (5, '주방용품', '밥그릇', 2000, 'yes'),
+  (6, '주방용품', '젓가락', 1000, 'no'),
+  (7, '디지털', '마우스', 15000, 'yes'),
+  (8, '디지털', '키보드', 10000, 'yes'),
+  (9, '욕실용품', '샴푸', 10000, 'yes'),
+  (10, '욕실용품', '바디워시', 8000, 'no'),
+  (11, '욕실용품', '수건', 2000, 'yes');
